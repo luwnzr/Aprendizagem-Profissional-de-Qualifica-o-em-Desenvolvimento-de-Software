@@ -1,0 +1,26 @@
+/*Consultando registros das tabelas*/
+select * from tb_cli
+
+/*Consultando registros das tabelas ordenando resultados*/
+select * from tb_cli
+order by cli_nome desc;
+
+/**Consultando registros das tabelas fiçltrando resultados*/
+select * from tb_cli
+where cli_end_bairro = 'Bairro J';
+
+/*Consultando registros da tabela por nome*/
+select * from tb_cli
+where cli_nome like '%Tatiane%';
+
+/*Consultando registros da tabela consultando a quantidade de inserts*/
+select * from tb_compra;
+select count(*) from tb_compra;
+
+/*Consultando registros de mais de uma tabela */
+select func_depto,func_nome from tb_func
+order by func_nome asc;
+
+/*Somando todos os valores em uma coluna da tabela.*/
+select * from tb_prod;
+select sum(prod_vlr) from tb_prod;

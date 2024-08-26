@@ -24,7 +24,7 @@ CREATE TABLE Clientes (
   id INT AUTO_INCREMENT PRIMARY KEY,
   nome VARCHAR(100) NOT NULL,
   cpf VARCHAR(14) NOT NULL,
-  telefone VARCHAR(15)
+  telefone VARCHAR(15),
   endereco VARCHAR(255)
 );
 CREATE TABLE Contratos(
@@ -33,8 +33,15 @@ CREATE TABLE Contratos(
   id_veiculo INT,
   data_inicio DATE NOT NULL,
   data_fim DATE,
-   valor_total DECIMAL(10, 2)
+   valor_total DECIMAL(10, 2),
   FORIGN KEY (id_cliente) REFERENCES Cliente(id),
   FOIGN KEY (id_veiculo) REFEERENCES Veiculos(id)
 );
+CREATE TABLE Pagamentos(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  id_contratos INT,
+  data_pagamento DATA NOT NULL,
+  valor  DECIMAL(10, 2) NOT NULL,
+  metodo ENUM('Dinheiro', 'Cartão de Crédito','Transferência') NOT NULL,
+  FOREIGN KEY (id_contrato) REFERENCES Contratos(id)
 );

@@ -20,3 +20,21 @@ CREATE TABLE Veiculos(
 status  ('Disponivel', 'Locado', 'Em Manutenção') DEFAULT 'Disponivel',
 FOREIGN KEY (id_modelo) REFERENCES Modelos(id)
 );
+CREATE TABLE Clientes (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  cpf VARCHAR(14) NOT NULL,
+  telefone VARCHAR(15)
+  endereco VARCHAR(255)
+);
+CREATE TABLE Contratos(
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  id_cliente INT,
+  id_veiculo INT,
+  data_inicio DATE NOT NULL,
+  data_fim DATE,
+   valor_total DECIMAL(10, 2)
+  FORIGN KEY (id_cliente) REFERENCES Cliente(id),
+  FOIGN KEY (id_veiculo) REFEERENCES Veiculos(id)
+);
+);

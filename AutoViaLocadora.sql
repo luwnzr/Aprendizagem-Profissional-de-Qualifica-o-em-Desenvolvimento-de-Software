@@ -11,7 +11,7 @@ nome VARCHAR(50) NOT NULL,
 id_marca INT,
 FOREIGN KEY (id_marca) REFERENCES Marcas(id)
 );
-CREATE TABLE Veículos (
+CREATE TABLE Veiculos (
 id INT AUTO_INCREMENT PRIMARY KEY,
 placa VARCHAR(10) NOT NULL UNIQUE,
 ano INT NOT NULL,
@@ -20,7 +20,7 @@ id_modelo INT,
 status ENUM ('Disponível','Locado','Em Manutenção') DEFAULT 'Disponivel',
 FOREIGN KEY (id_modelo) REFERENCES Modelos(id)
 );
-CREATE TABLE Ciente (
+CREATE TABLE Cliente (
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100) NOT NULL,
 cpf VARCHAR(14) NOT NULL UNIQUE,
@@ -35,7 +35,7 @@ data_inicio DATE NOT NULL,
 data_fim DATE,
 valor_total DECIMAL(10, 2),
 FOREIGN KEY (id_cliente) REFERENCES Clientes(id),
-FOREIGN KEY (id_veículos) REFERENCES Veículos(id)
+FOREIGN KEY (id_veículos) REFERENCES Veiculos(id)
 );
 CREATE TABLE Pagamentos (
 id INT AUTO_INCREMENT PRIMARY KEY,
@@ -72,7 +72,7 @@ INSERT INTO Marcas (nome) VALUES
 ('Lincoln'),
 ('GMC');
 SET FOREIGN_KEY_CHECKS=1;
-INSERT INTO veiculos (placa, ano, cor, id_modelo) VALUES
+INSERT INTO Veiculos (placa, ano, cor, id_modelo) VALUES
 ('ABC1235', 2021,'Prata', 1),
 ('XYZ5679', 2622,'Cinza', 2),
 ('LMN9102', 2028,'preto', 3),
@@ -103,7 +103,8 @@ INSERT INTO veiculos (placa, ano, cor, id_modelo) VALUES
 ('XYZ3456', 2021, 'Cinza', 28),
 ('ABC7898', 2020, 'Branco', 29), 
 ('DEF0123', 2022, 'Preto', 30);
-INSERT INTO clientes (nome, cpf, telefone, endereco) VALUES
+
+INSERT INTO Clientes (nome, cpf, telefone, endereco) VALUES
 ('Ana Paula', '567.222.333-49', '(11) 91234-5678', 'Rua D, 123'),
 ('Bruno Stiva', '222.353.444-55', '(21) 92345-6789', 'Rua E, 456'),
 ('Clara Martins', '888.444.555-66', '(31) 93456-7898', 'Rua F, 789'),
@@ -134,10 +135,11 @@ INSERT INTO clientes (nome, cpf, telefone, endereco) VALUES
 ('Bernardo Sousa', '888.969.009-11', '(11) 99901-2345', 'Rua EE, 2525'),
 ('Carla Mendes', '999.000.111-22', '(21) 90012-3456', 'Rua FF, 2626'), 
 ('Diego Santos', '065.111.222-33', '(31) 91123-4567', 'Rua GG, 2727');
+
 INSERT INTO Contratos (id_cliente, id_veiculo, data_inicio, data_fim, valor_total) VALUES
 (1, 1, '2024-07-01', '2024-07-10', 500.00);
 
-/Inserindo registos nas tabelas/
+/*Inserindo registos nas tabelas*/
 INSERT INTO Marcas (nome) VALUES 
 ('Toyota'), 
 ('Honda'), 

@@ -12,18 +12,18 @@ create table `bd_exercicio`.`tb_funcionario`(
 );
 create table `bd_exercicio`.`tb_departamento`(
 	`depto_codigo` INT NOT NULL PRIMARY KEY,
-    `depto_nome` VARCHAR (60) NULL,
-    `local_cod` INT
+	`depto_nome` VARCHAR (60) NULL,
+	`local_cod` INT
 );
 create table `bd_exercicio`.`tb_projeto`(
 	`proj_codigo` INT NOT NULL primary KEY,
-    `proj_numero` INT,
-    `depto_cod` INT,
-    `local_cod`INT
+    	`proj_numero` INT,
+    	`depto_cod` INT,
+    	`local_cod`INT
 );
 create table `bd_exercicio`.`tb_local`(
-`local_codigo` INT NOT NULL PRIMARY KEY,
-`local_desc` VARCHAR (60) NULL
+	`local_codigo` INT NOT NULL PRIMARY KEY,
+	`local_desc` VARCHAR (60) NULL
 );
 
 /*Indice e Fk Funcionario /Gerencia /Departamento*/

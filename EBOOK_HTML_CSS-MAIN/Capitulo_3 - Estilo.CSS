@@ -1,0 +1,98 @@
+/*Definições de estilo para o corpo da página*/
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+/*Estilo para os cabeçaslhos*/
+h2{
+    color: #333;
+    margin-bottom: 20px;   
+}
+h3 {
+    margin: 10px 0;
+    color: #666;
+}
+/*Estilos para links*/
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+.font-family {
+    font-family: "Courier New";
+}
+.fonte-tamanho {
+    font-size: 20px;
+}
+.fonte-peso {
+    font-weight: 600;
+}
+.fonte-estilo {
+    font-style: italic;
+}
+.texto-cor{
+    color: #0088cc;
+}
+.texto-centrailizado {
+    text-align: center;
+}
+.texto-sublinhado {
+    text-decoration: underline;
+}
+.texto-maiuculas {
+    text-transform: uppercase;
+}
+.sombra-texto {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.expacamento-letras {
+    letter-spacing: 1.5px;
+}
+.espacamento-palavras {
+    word-spacing: 14px;
+}
+/* Isto é um comentário simples em CSS */
+/*
+Este é um comentário
+de múltiplas linhas
+em CSS
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.destaque {
+    background-color: yellow;
+    font-weight: bold;
+}
+.texto-grande {
+    font-size: 24px;
+}
+.texto-azul {
+    color: blue;
+}
+#cabecalho-principal {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* Seletor universal*/
+* {
+    margin: 0;
+    padding: 0;
+}
+input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+}
+a[href^=http] {
+    color: red;
+}
+div[data-status="ativo"] {
+    background-color: green;
+}
+/**/

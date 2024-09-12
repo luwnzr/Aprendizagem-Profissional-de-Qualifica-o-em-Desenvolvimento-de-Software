@@ -241,5 +241,128 @@ html {
 }
 .borda-individual {
     border-top: 4px dotted red; /*Borda superior pontilhada vermelha*/
-    
+    border-right: 3px dashed green; /*Borda direita tracejada verde*/   
+    border-bottom: 2px solid blue; /*Borda inferior sólida azul*/
+    border-left: 5px double orange; /*Borda esquerda dupla laranja*/
+}
+.borda-arredondada {
+    border: 3px solid purple; /*Borda sólida roxa*/
+    border-radius: 10px; /*Raio da borda para arredondar os cantos*/
+}
+.borda-efeito {
+    border: 2px solid #8a2be2; /*Borda sólida cor de beterraba*/
+    border-radius: 50%; /*Cria uma forma circular*/
+    width: 100px;
+    height: 100px;
+}
+.caixa-padding {
+    padding: 20px; /*Aplica um padding uniforme de 20 px em todos os lados*/
+    background-color: #ff6347; /*Tomate*/
+}
+.padding-individual {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    background-color: #4682b4; /*Azul aço*/
+}
+.padding-relativo {
+    padding: 2em; /*O padding é baseado no tamanho da fonte do elemento*/
+    background-color: #32cd32; /*Verde lima*/
+}
+.block-elemento {
+    display: block;
+    background-color: lightblue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+.inline-elemento {
+    display: inline;
+    background-color: lightcoral;
+    color: white;
+    padding: 5px;
+    margin-right: 5px; /*Aplica margem à direita para separar elementos inline adjacentes*/
+}
+.inline_block-elemento {
+    display: inline-block;
+    background-color: lightgreen;
+    color: white;
+    width: 100px; /*Define a largura do elemento*/
+    text-align: center;
+    line-height: 100px; /*Centraliza verticalmente o texto*/
+    margin: 10px; /*Espaçamento entre elementos inline-block adjacentes*/
+}
+.esconder-elemento {
+    display: none;
+}
+.escondido {
+    visibility: hidden;
+}
+.visivel {
+    visibility: visible;
+}
+.elemento-static {
+    /*position: static; é o padrão, portanto, geralmente não é necessario declará-lo*/
+    border: 2px solid blue;
+    margin: 5px;
+}
+.elemento-relativo {
+    position: relative;
+    top: 10px; /*Desloca o elmento 10 px para baixo a partir de sua posição original*/
+    left: 20px; /*Desloca o elemento 20px para a direita a partir de sua posição original*/
+    border: 2px solid green;
+}
+.container-relativo {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: lightblue;
+}
+.elemento-absoluto {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: coral;
+}
+.barra-navegação {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.cabecalho-sticky {
+    position: -webkit-sticky; /*Para compatibilidade com o safari*/
+    position: sticky;
+    top: 50px;
+    background-color: darkcyan;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+.index-container {
+    position: relative;
+}
+.fundo {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    z-index: 1; /*Menor z-index*/
+}
+.frente {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50px;
+    top: 50px;
+    background-color: lightcyan;
+    z-index: 2; /*Maior z-index*/
 }
